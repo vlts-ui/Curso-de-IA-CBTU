@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso sobre o Uso da Inteligência Artificial na CBTU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .cbtu-bg-blue { background-color: #0080C8; }
+        .cbtu-text-blue { color: #0080C8; }
+        .cbtu-border-blue { border-color: #0080C8; }
+        .cbtu-bg-green { background-color: #009C57; }
+        .cbtu-text-green { color: #009C57; }
+        .cbtu-border-green { border-color: #009C57; }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            border: 4px solid #0080C8;
+            top: 0;
+            left: -10px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <header class="cbtu-bg-blue text-white p-8 text-center shadow-lg">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-black uppercase tracking-wide">Curso de Inteligência Artificial na CBTU</h1>
+            
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="introducao" class="bg-white rounded-xl shadow-md p-8 mb-12">
+            <h2 class="text-3xl font-bold cbtu-text-blue mb-6 text-center">O Futuro Chegou: Capacitação em IA para a CBTU</h2>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-8">Este curso visa capacitar os colaboradores da CBTU no uso prático e estratégico de ferramentas de Inteligência Artificial para otimizar a rotina de trabalho, aumentar a produtividade e impulsionar a inovação em todas as áreas da companhia.</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="border-t-4 cbtu-border-green pt-4">
+                    <h3 class="text-2xl font-bold cbtu-text-green">Foco</h3>
+                    <p class="mt-2 text-base">Dominar a aplicação prática de IA para a otimização de rotinas de escritório, como geração de documentos, análise de dados e automação de tarefas.</p>
+                </div>
+                <div class="border-t-4 cbtu-border-blue pt-4">
+                    <h3 class="text-2xl font-bold cbtu-text-blue">Estrutura & Datas (20h)</h3>
+                    <p class="mt-2 text-base">Carga horária total de <span class="text-xl font-bold">vinte</span> horas, distribuídas em 5 aulas com conteúdo teórico e prático. As aulas estão programadas para ocorrer às terças e quintas de novembro, desenhadas para um aprendizado progressivo e consolidado.</p>
+                </div>
+                <div class="border-t-4 cbtu-border-green pt-4">
+                    <h3 class="text-2xl font-bold cbtu-text-green">Metodologia</h3>
+                    <p class="mt-2 text-base">Aulas dinâmicas, com estudos de caso e aplicação real dos conceitos em desafios do dia a dia da CBTU.</p>
+                </div>
+                <div class="border-t-4 cbtu-border-blue pt-4">
+                    <h3 class="text-2xl font-bold cbtu-text-blue">Palestrantes</h3>
+                    <p class="mt-2 text-base">Emmanoel Neri<br>Victor Lucas</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="visualizacoes" class="mb-12">
+             <h2 class="text-3xl font-bold cbtu-text-blue mb-8 text-center">Visão Geral do Curso</h2>
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                 <div class="bg-white rounded-xl shadow-md p-6">
+                    <h3 class="text-xl font-bold text-center mb-4">Foco de Habilidades por Tópico</h3>
+                    <p class="text-center text-sm mb-4">O curso oferece uma formação equilibrada, com forte ênfase na criação de conteúdo multimídia e análise de dados, habilidades essenciais para a modernização dos processos.</p>
+                    <ul class="text-left space-y-3 mt-6 mx-auto max-w-xs">
+                        <li class="flex items-start">
+                            <span class="inline-block w-3 h-3 rounded-full cbtu-bg-blue mt-1 mr-3 flex-shrink-0"></span>
+                            <div>
+                                <span class="font-medium text-gray-800">Criação de Mídia:</span> Produção de vídeos, áudios e imagens.
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <span class="inline-block w-3 h-3 rounded-full cbtu-bg-green mt-1 mr-3 flex-shrink-0"></span>
+                            <div>
+                                <span class="font-medium text-gray-800">Análise de Documentos:</span> Uso de IA para mapeamento, resumo e organização de dados.
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <span class="inline-block w-3 h-3 rounded-full bg-[#F28C28] mt-1 mr-3 flex-shrink-0"></span>
+                            <div>
+                                <span class="font-medium text-gray-800">Geração de Texto:</span> Criação de relatórios, ementas e comunicações otimizadas.
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <span class="inline-block w-3 h-3 rounded-full bg-[#A9A9A9] mt-1 mr-3 flex-shrink-0"></span>
+                            <div>
+                                <span class="font-medium text-gray-800">Personalização e Automação:</span> Treinamento de assistentes personalizados (GEMs e GPTs).
+                            </div>
+                        </li>
+                    </ul>
+                 </div>
+                 <div class="bg-white rounded-xl shadow-md p-6">
+                     <h3 class="text-xl font-bold text-center mb-4">Principais Ferramentas Abordadas</h3>
+                     <p class="text-center text-sm mb-4">A ementa explora uma ampla gama de ferramentas poderosas do mercado, incluindo GPT, Gemini, Gamma App e NotebookLM, capacitando o colaborador a escolher a melhor IA para cada tarefa.</p>
+                    <div class="chart-container">
+                        <canvas id="toolFocusChart"></canvas>
+                    </div>
+                 </div>
+             </div>
+        </section>
+
+        <section id="ementa">
+            <h2 class="text-3xl font-bold cbtu-text-blue mb-10 text-center">Ementa do Curso: 5 Aulas para Dominar a IA</h2>
+            <div class="relative max-w-2xl mx-auto">
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 cbtu-bg-blue rounded"></div>
+                
+                <div class="relative mt-8">
+
+                    <div class="mb-8 flex justify-between items-center w-full">
+                        <div class="w-full lg:w-1/2 lg:pr-8">
+                            <div class="bg-white p-6 rounded-xl shadow-md border-l-4 cbtu-border-green">
+                                <h3 class="font-bold text-xl mb-3 cbtu-text-green">Aula 1: Introdução e Primeiro Contato</h3>
+                                <p class="text-sm">Fundamentos da IA e contato inicial com as principais IAs de texto do mercado como GPT, Gemini e Claude. Exploração de recursos multimídia, uso mobile e análise de dados básicos.</p>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block w-1/2"></div>
+                    </div>
+
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full">
+                        <div class="w-full lg:w-1/2 lg:pl-8">
+                             <!-- MUDANÇA: Aula 2 de verde para AZUL -->
+                             <div class="bg-white p-6 rounded-xl shadow-md border-r-4 cbtu-border-blue">
+                                <h3 class="font-bold text-xl mb-3 cbtu-text-blue">Aula 2: Criação de Apresentações e Audiovisual</h3>
+                                <p class="text-sm">Foco na produção de conteúdo. Uso do GAMMA APP para apresentações e exploração de ferramentas como SORA e Nano Banana para vídeo e áudio. Detalhamento do Modo Canvas do Gemini e Google Labs.</p>
+                            </div>
+                        </div>
+                         <div class="hidden lg:block w-1/2"></div>
+                    </div>
+
+                    <div class="mb-8 flex justify-between items-center w-full">
+                        <div class="w-full lg:w-1/2 lg:pr-8">
+                            <!-- MUDANÇA: Aula 3 de azul para VERDE -->
+                            <div class="bg-white p-6 rounded-xl shadow-md border-l-4 cbtu-border-green">
+                                <h3 class="font-bold text-xl mb-3 cbtu-text-green">Aula 3: Análise de Documentos e Aprendizado</h3>
+                                <p class="text-sm">Uso do NOTEBOOK LM para organizar e analisar informações. Aplicações para treinamento de equipes, criação de mapas mentais a partir de documentos e desenvolvimento de quizzes interativos.</p>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block w-1/2"></div>
+                    </div>
+
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full">
+                        <div class="w-full lg:w-1/2 lg:pl-8">
+                            <div class="bg-white p-6 rounded-xl shadow-md border-r-4 cbtu-border-blue">
+                                <h3 class="font-bold text-xl mb-3 cbtu-text-blue">Aula 4: Assistentes Personalizados (GEMs e GPT)</h3>
+                                <p class="text-sm">Introdução e treinamento de assistentes de IA (recurso pago). Criação prática de GEMs no Gemini para tarefas específicas, como leitor de planilhas e verificador de Termos de Referência (TR).</p>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block w-1/2"></div>
+                    </div>
+
+                    <div class="mb-8 flex justify-between items-center w-full">
+                        <div class="w-full lg:w-1/2 lg:pr-8">
+                           <div class="bg-white p-6 rounded-xl shadow-md border-l-4 cbtu-border-green">
+                                <h3 class="font-bold text-xl mb-3 cbtu-text-green">Aula 5: Aplicações Práticas no Escritório</h3>
+                                <p class="text-sm">Foco no dia a dia: digitalização de texto, leitura de projetos e plantas para extração de dados e auxílio em problemas práticos. Boas práticas de Engenharia de Prompt e cuidados com dados.</p>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block w-1/2"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="cbtu-bg-green text-white text-center p-4 mt-12">
+        <p>Curso de Inteligência Artificial na CBTU</p>
+    </footer>
+
+    <script>
+        const cbtuBlue = '#0080C8';
+        const cbtuGreen = '#009C57';
+        const supportOrange = '#F28C28';
+        const supportGray = '#A9A9A9';
+
+        const tooltipTitleCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+        
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (typeof label !== 'string' || label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+        
+        const originalToolLabels = ['Gemini (Suite)', 'GPT (Suite)', 'Ferramentas Específicas (Gamma, NotebookLM)', 'Google Labs (Experimental)'];
+        const wrappedToolLabels = originalToolLabels.map(wrapLabel);
+
+        // O gráfico de habilidades (skillFocusChart) foi removido e substituído por uma lista.
+        // O código JavaScript para este gráfico (skillCtx) foi removido.
+
+        const toolCtx = document.getElementById('toolFocusChart').getContext('2d');
+        new Chart(toolCtx, {
+            type: 'bar',
+            data: {
+                labels: wrappedToolLabels,
+                // Dados atualizados para refletir o feedback: Gemini (8), GPT (7), Específicas (5), Labs (2)
+                datasets: [{
+                    label: 'Foco em Ferramentas (por relevância na ementa)',
+                    data: [8, 7, 5, 2],
+                    backgroundColor: cbtuBlue,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                     ...tooltipTitleCallback.plugins,
+                    legend: {
+                       display: false
+                    }
+                },
+                 scales: {
+                    x: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
